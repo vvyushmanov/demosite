@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Добро пожаловать в дипломную работу курса DevOps от Нетологии</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            color: #3498db;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #2980b9;
+        }
+
+        .logo {
+            width: 200px;
+            height: 200px;
+        }
+
+        .cat {
+            width: 300px;
+            height: auto;
+            margin-top: auto;
+            /* align-items: center;
+            justify-content: center;
+            text-align: center; */
+            display: none;
+            margin: 0 auto;
+        }
+
+        .generated-by {
+            font-style: italic;
+            color: #888;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://example.com/logo.png" alt="Логотип Нетологии" class="logo">
+    <h1>Добро пожаловать в дипломную работу курса DevOps от Нетологии</h1>
+    <p>Эта страница создана для демонстрации работы моего Kubernetes кластера. Надеюсь, вам понравится!</p>
+    <button class="button" onclick="showMessage()">Нажми меня!</button>
+    <p id="message" style="display: none;">Спасибо, что нажали на кнопку!</p>
+    
+    <button class="button" onclick="showRandomCat()">Случайный котик</button>
+    <img id="randomCat" src="" alt="Случайный котик" class="cat" style="display: none;">
+
+    <p class="generated-by">Эту страницу сгенерировал ChatGPT от OpenAI</p>
+
+    <script>
+        function showMessage() {
+            var message = document.getElementById("message");
+            message.style.display = "block";
+            message.style.alignContent = "center";
+            message.style.alignItems = "center";
+            message.style.alignSelf = "center";
+        }
+
+        function showRandomCat() {
+            var randomCat = document.getElementById("randomCat");
+            randomCat.style.display = "block";
+            // randomCat.src = "https://placekitten.com/" + (Math.floor(Math.random() * 10) + 300) + "/300";
+            var width = Math.floor(Math.random() * 200) + 200; // от 200 до 400
+            var height = Math.floor(Math.random() * 200) + 200; // от 200 до 400            
+            randomCat.src = "https://placekitten.com/" + width + "/" + height;
+            randomCat.style.alignContent = "center";
+            randomCat.style.alignItems = "center";
+            randomCat.style.alignSelf = "center";
+        }
+    </script>
+</body>
+</html>
